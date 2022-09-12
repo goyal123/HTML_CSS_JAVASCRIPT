@@ -2,7 +2,9 @@
 <head>
     <title>Bridgelabz</title>
     <link rel="stylesheet" href="./new.css">
+    <script src="./script.js"></script>
 </head>
+
 <body>
     <div class="header"> 
         <img src = "assets/logo.png" width="100">
@@ -11,15 +13,14 @@
     <center>
         <h1>Welcome to BridgeLabz</h1>
     </center>
-    
+
     <h3>Bridgelabz Community is of :</h3>
         <ol>
         <li>Thinkers</li>
         <li>Dreamers</li>
         <li>Builders</li>
         </ol>
-    </P>
-<p>
+
     Bridgelabz is an AWS recognised incubator and is soley focused on solving tech employability. 
     Over the last 5 years, it has worked with 500+ top tech companies and 2500+ engineers have been hired 
     from Bridgelabz. It has labs in Mumbai and Bangalore. It has partnered with over 500 companies, including
@@ -29,4 +30,57 @@
         350+ learners placed in last 6 months despite covid downturn while most organizations were not hiring
          or were laying off!
 </p>
+<center>
+    <p>Please Enter your Details</p>
+    <form method="get" onsubmit="myFunction()">
+    <fieldset style="width:300px">
+        <legend>Registation Form</legend>
+        <table>
+            <tr>
+                <label>FirstName:</label>
+                <input type="text" id="fname" pattern="^([a-zA-Z]+){3,}" title="Atlest three char" required>
+            </tr>
+            <br><br>
+            <tr>
+                <label>LastName:</label>
+                <input type="text" id="lname" pattern="^([a-zA-Z]+){3,}" title="Atlest three char" required>
+            </tr>
+            <br><br>
+            <tr>
+                <label>Mobile No:</label>
+                <input type="text" id="phone" pattern="[0-9]{10,10}" title="Required 10-digit" required>
+            </tr>
+            <br><br>
+            <tr>
+                <label>Pincode:</label>
+                <input type="text" id="pin" pattern="[0-9]{6,6}" title="Required 6-digit" required>
+            </tr>
+            <br><br>
+            <tr>
+                <label>Salary:</label>
+                <input type="range" min="25000" max="100000" step="100" id="salary">
+                <span id="salaryvalue"></span>
+                <script>
+                    var rangeslider = document.getElementById("salary");
+                    var output = document.getElementById("salaryvalue");
+                    output.innerHTML = rangeslider.value;
+                    rangeslider.oninput = function() {
+                    output.innerHTML = this.value;
+                                                    }
+
+
+                </script>
+
+  
+
+
+            </tr>
+            <br><br>
+            </tr>
+            <tr><input type="submit">
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+
 </body>
